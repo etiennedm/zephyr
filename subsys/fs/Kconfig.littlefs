@@ -69,6 +69,15 @@ config FS_LITTLEFS_BLOCK_CYCLES
 
 endmenu
 
+config FS_LITTLEFS_INIT_PRIORITY
+	int "LittleFS init priority"
+	default 85
+	help
+	  LittleFS filesystem initialization priority. Especially relevant
+	  if auto mount is enabled because other subsystems (e.g. a subsystem
+	  using settings) are expecting a file system to be mounted at init
+	  time.
+
 config FS_LITTLEFS_FC_HEAP_SIZE
 	int "Enable flexible file cache sizes for littlefs"
 	default 0

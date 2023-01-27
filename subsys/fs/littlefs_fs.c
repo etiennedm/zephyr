@@ -1098,4 +1098,4 @@ static int littlefs_init(void)
 	return rc;
 }
 
-SYS_INIT(littlefs_init, POST_KERNEL, 99);
+SYS_INIT(littlefs_init, POST_KERNEL, CONFIG_FS_LITTLEFS_INIT_PRIORITY);
